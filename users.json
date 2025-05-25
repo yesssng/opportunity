@@ -1,0 +1,299 @@
+[
+  { "id": 1, "username": "yesssng@gmail.com", "password": "1234", "firstName": "Admin", "lastName": "Admin", "role": "admin" },
+  {
+    "id": 2,
+    "username": "220512@astanait.edu.kz",
+    "group": "SE-2132",
+    "firstName": "Adil",
+    "lastName": "Yessengarin",
+    "password": "1234",
+    "role": "user",
+    "favorites": [4, 12, 15, 16],
+    "appliedTo": [
+      { "jobId": 1, "applicationStatus": "pending", "appliedAt": "2024-06-01T10:00:00Z" },
+      { "jobId": 2, "applicationStatus": "pending", "appliedAt": "2024-06-02T11:00:00Z" },
+      { "jobId": 3, "applicationStatus": "pending", "appliedAt": "2024-06-03T12:00:00Z" },
+      { "jobId": 5, "applicationStatus": "pending", "appliedAt": "2024-06-04T13:00:00Z" },
+      { "jobId": 7, "applicationStatus": "pending", "appliedAt": "2024-06-05T14:00:00Z" }
+    ],
+    "status": "Employed",
+    "contacts": {
+      "phone": "+77011234567",
+      "linkedin": "@adilkz"
+    },
+    "education": {
+      "major": "Software Engineering",
+      "year": 4
+    },
+    "location": {
+      "city": "Astana",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "I am a passionate software engineer with a keen interest in web development and AI. I love solving complex problems and learning new technologies."
+  },
+  {
+    "id": 3,
+    "username": "220513@astanait.edu.kz",
+    "group": "SE-2133",
+    "firstName": "Aruzhan",
+    "lastName": "Tulegenova",
+    "password": "1234",
+    "role": "user",
+    "favorites": [6, 9, 13],
+    "appliedTo": [
+      { "jobId": 2, "applicationStatus": "pending", "appliedAt": "2024-06-06T09:15:00Z" },
+      { "jobId": 8, "applicationStatus": "pending", "appliedAt": "2024-06-07T10:30:00Z" }
+    ],
+    "status": "Unemployed",
+    "contacts": {
+      "phone": "+77015554433",
+      "linkedin": "@aruzhan"
+    },
+    "education": {
+      "major": "Computer Science",
+      "year": 3
+    },
+    "location": {
+      "city": "Almaty",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Curious and self-driven, I enjoy building web apps and contributing to open-source projects."
+  },
+  {
+    "id": 4,
+    "username": "220514@astanait.edu.kz",
+    "group": "IS-2141",
+    "firstName": "Nursultan",
+    "lastName": "Zhaksylykov",
+    "password": "1234",
+    "role": "user",
+    "favorites": [1, 10],
+    "appliedTo": [
+      { "jobId": 4, "applicationStatus": "pending", "appliedAt": "2024-06-08T11:00:00Z" }
+    ],
+    "status": "Intern",
+    "contacts": {
+      "phone": "+77017778899",
+      "linkedin": "@nursultan_dev"
+    },
+    "education": {
+      "major": "Information Security",
+      "year": 2
+    },
+    "location": {
+      "city": "Shymkent",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "InfoSec enthusiast and future cybersecurity expert. I value clean code and secure systems."
+  },
+  {
+    "id": 5,
+    "username": "220515@astanait.edu.kz",
+    "group": "SE-2134",
+    "firstName": "Aliya",
+    "lastName": "Samat",
+    "password": "1234",
+    "role": "user",
+    "favorites": [3, 5, 11],
+    "appliedTo": [],
+    "status": "Looking",
+    "contacts": {
+      "phone": "+77019992222",
+      "linkedin": "@aliya_samat"
+    },
+    "education": {
+      "major": "Software Engineering",
+      "year": 1
+    },
+    "location": {
+      "city": "Karaganda",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Motivated first-year student eager to get real-world experience in frontend development."
+  },
+  {
+    "id": 6,
+    "username": "220516@astanait.edu.kz",
+    "group": "SE-2135",
+    "firstName": "Timur",
+    "lastName": "Amanov",
+    "password": "1234",
+    "role": "user",
+    "favorites": [7],
+    "appliedTo": [
+      { "jobId": 7, "applicationStatus": "pending", "appliedAt": "2024-06-09T14:00:00Z" }
+    ],
+    "status": "Employed",
+    "contacts": {
+      "phone": "+77014445566",
+      "linkedin": "@timuramanov"
+    },
+    "education": {
+      "major": "Computer Science",
+      "year": 4
+    },
+    "location": {
+      "city": "Aktobe",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Final-year CS student currently working part-time as a backend developer. Interested in microservices and databases."
+  },
+  {
+    "id": 7,
+    "username": "220517@astanait.edu.kz",
+    "group": "IS-2142",
+    "firstName": "Zhanel",
+    "lastName": "Aituganova",
+    "password": "1234",
+    "role": "user",
+    "favorites": [2, 8, 14],
+    "appliedTo": [
+      { "jobId": 1, "applicationStatus": "pending", "appliedAt": "2024-06-10T15:00:00Z" }
+    ],
+    "status": "Available",
+    "contacts": {
+      "phone": "+77013337744",
+      "linkedin": "@zhanel.codes"
+    },
+    "education": {
+      "major": "Cybersecurity",
+      "year": 2
+    },
+    "location": {
+      "city": "Astana",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Creative thinker with a strong foundation in networks and ethical hacking. I love CTF challenges."
+  },
+  {
+    "id": 8,
+    "username": "220518@astanait.edu.kz",
+    "group": "SE-2136",
+    "firstName": "Dias",
+    "lastName": "Bekzhanov",
+    "password": "1234",
+    "role": "user",
+    "favorites": [9, 12],
+    "appliedTo": [],
+    "status": "Looking",
+    "contacts": {
+      "phone": "+77012223344",
+      "linkedin": "@diasdev"
+    },
+    "education": {
+      "major": "Software Engineering",
+      "year": 3
+    },
+    "location": {
+      "city": "Astana",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Aspiring full-stack developer. Enjoys working with React and Node.js."
+  },
+  {
+    "id": 9,
+    "username": "220519@astanait.edu.kz",
+    "group": "IS-2143",
+    "firstName": "Madina",
+    "lastName": "Kassymova",
+    "password": "1234",
+    "role": "user",
+    "favorites": [4, 6, 10],
+    "appliedTo": [
+      { "jobId": 3, "applicationStatus": "pending", "appliedAt": "2024-06-11T09:45:00Z" }
+    ],
+    "status": "Intern",
+    "contacts": {
+      "phone": "+77014446677",
+      "linkedin": "@madina.dev"
+    },
+    "education": {
+      "major": "Information Security",
+      "year": 4
+    },
+    "location": {
+      "city": "Almaty",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Focused on cybersecurity analytics and risk assessment. Seeking internship opportunities."
+  },
+  {
+    "id": 10,
+    "username": "220520@astanait.edu.kz",
+    "group": "SE-2137",
+    "firstName": "Azamat",
+    "lastName": "Nurlybekov",
+    "password": "1234",
+    "role": "user",
+    "favorites": [5, 7, 11],
+    "appliedTo": [],
+    "status": "Unemployed",
+    "contacts": {
+      "phone": "+77018889900",
+      "linkedin": "@azamatn"
+    },
+    "education": {
+      "major": "Computer Science",
+      "year": 2
+    },
+    "location": {
+      "city": "Pavlodar",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Love solving algorithmic problems. Currently learning Python and Django."
+  },
+  {
+    "id": 11,
+    "username": "220521@astanait.edu.kz",
+    "group": "IS-2144",
+    "firstName": "Ainur",
+    "lastName": "Kenzhe",
+    "password": "1234",
+    "role": "user",
+    "favorites": [1, 13, 15],
+    "appliedTo": [
+      { "jobId": 6, "applicationStatus": "pending", "appliedAt": "2024-06-12T16:00:00Z" }
+    ],
+    "status": "Looking",
+    "contacts": {
+      "phone": "+77015556677",
+      "linkedin": "@ainurkenzhe"
+    },
+    "education": {
+      "major": "Information Systems",
+      "year": 3
+    },
+    "location": {
+      "city": "Astana",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "Strong background in databases and BI tools. Looking for internship in analytics."
+  },
+  {
+    "id": 12,
+    "username": "220522@astanait.edu.kz",
+    "group": "SE-2138",
+    "firstName": "Ramazan",
+    "lastName": "Temirlan",
+    "password": "1234",
+    "role": "user",
+    "favorites": [2, 4, 8],
+    "appliedTo": [],
+    "status": "Available",
+    "contacts": {
+      "phone": "+77013334455",
+      "linkedin": "@ramazant"
+    },
+    "education": {
+      "major": "Software Engineering",
+      "year": 1
+    },
+    "location": {
+      "city": "Uralsk",
+      "country": "Kazakhstan"
+    },
+    "aboutMe": "First-year student passionate about Android development and mobile UI/UX."
+  }
+]
+
+
