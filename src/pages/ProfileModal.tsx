@@ -27,7 +27,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ visible, onClose }) => {
         >
           &times;
         </button>
-        <h1>{username} {firstName} {lastName}</h1>
+        <h1 className="border-1 rounded-3xl p-40">Email: {username}  Name: {firstName}  Last Name: {lastName}</h1>
       </div>
     </div>
   );

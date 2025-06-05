@@ -2,6 +2,7 @@ import { House, HeartHandshake, Users, LayoutDashboard, X, Menu } from "lucide-r
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../AuthContext"; // путь может отличаться
+import Opportunities from "@/pages/Opportunities";
 
 const LeftMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,7 +18,7 @@ const LeftMenu: React.FC = () => {
   const adminItems = [
     { name: "Admin Dashboard", icon: <LayoutDashboard />, path: "/adminDashboard" },
     { name: "People", icon: <Users />, path: "/people" },
-    { name: "Opportunities", icon: <Users />, path: "/people" },
+    { name: "Opportunities", icon: <Users />, path: "/opportunities" },
     { name: "Administrators", icon: <Users />, path: "/people" } 
   ];
 

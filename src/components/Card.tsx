@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Heart } from "lucide-react";
 
 interface JobCardProps {
   job: {
@@ -18,7 +19,7 @@ const Card: React.FC<JobCardProps> = ({ job }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/jobPage/${job.id}`); // Предполагаем, что route принимает ID
+    navigate(`/jobPage/${job.id}`);
   };
 
   const truncatedDescription =
@@ -53,12 +54,13 @@ const Card: React.FC<JobCardProps> = ({ job }) => {
 
         {/* Buttons */}
         <div className="flex gap-3 mt-4">
-          <button onClick={handleClick} className="bg-black text-white text-sm px-4 py-2 rounded">
+          <button onClick={handleClick} className="bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm px-4 py-2 rounded">
             Apply Now
           </button>
           <button className="bg-black text-white text-sm px-4 py-2 rounded">
             Learn More
           </button>
+          <Heart className="text-gray-500 cursor-pointer ml-30 mt-1" size={30} />
         </div>
       </div>
     </div>
