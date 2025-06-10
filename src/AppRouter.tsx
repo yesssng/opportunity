@@ -32,7 +32,7 @@ const AppRouter = () => {
                     </Route>
                 </Route>
 
-                <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
+                <Route element={<ProtectedRoute allowedRoles={['ADMIN']} />}>
                     <Route element={<MainLayout />}>
                     <Route path="/adminDashboard" element={<AdminDashboard />} />
                     <Route path="/people" element={<People />} />

@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleLogout = () => {
-    setUser(null);
+    localStorage.clear();
     navigate("/login");
   };
 

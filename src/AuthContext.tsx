@@ -4,7 +4,7 @@ interface User {
   username: string;
   firstName: string;
   lastName: string;
-  role: "user" | "admin";
+  role: "USER" | "ADMIN";
 }
 
 interface AuthContextType extends User {

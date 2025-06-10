@@ -6,6 +6,7 @@ import { Terminal } from "lucide-react"
 import users from '../../users.json' with { type: 'json' };
 import { useAuth } from '../AuthContext'
 import { useEffect } from 'react'
+import axios from 'axios'
 
 import {
   Alert,
@@ -30,32 +31,48 @@ const LoginPage: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState<string | null>(null); 
   const navigate = useNavigate();
 
-  const handleLogin = (): void => {
-  const foundUser = users.find(
-    (user) => user.username === username && user.password === password
-  );
+  const handleLogin = async (): Promise<void> => {
+  try {
+    // 1. POST-запрос для получения токена
+    const loginResponse = await axios.post("http://localhost:8080/api/v1/authentication/login", {
+      email: username,
+      password,
+    });
 
-  if (foundUser) {
-    const newUser = {
-      username: foundUser.username,
-      firstName: foundUser.firstName,
-      lastName: foundUser.lastName,
-      role: foundUser.role,
-    };
+    const token = loginResponse.data.token;
+    console.log(token)
+    localStorage.setItem("token", token);
 
-    setUser(newUser);
+    // 2. GET-запрос для получения информации о пользователе
+    const userResponse = await axios.get("http://localhost:8080/api/v1/authentication/user", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const user = userResponse.data;
+    console.log(user)
+
+    // Обновление AuthContext
+    setUser({
+      username: user.email,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      role: user.role,
+    });
+
     setAlertMessage("Login successful! You can continue using the app.");
 
-    // перенаправление по роли
+    // Перенаправление по роли
     setTimeout(() => {
-      if (foundUser.role === "admin") {
-        navigate("/adminDashboard");
-      } else {
-        navigate("/home");
-      }
-    }, 2000);
-  } else {
-    alert("Invalid username or password");
+      navigate(user.role === "ADMIN" ? "/adminDashboard" : "/home");
+    }, 1500);
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      alert(error.response?.data?.message || "Login failed.");
+    } else {
+      alert("Unexpected error during login.");
+    }
   }
 };
 

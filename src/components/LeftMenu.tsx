@@ -1,7 +1,7 @@
 import { House, HeartHandshake, Users, LayoutDashboard, X, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../AuthContext"; // путь может отличаться
+import { useAuth } from "../AuthContext"; 
 import Opportunities from "@/pages/Opportunities";
 
 const LeftMenu: React.FC = () => {
@@ -22,7 +22,7 @@ const LeftMenu: React.FC = () => {
     { name: "Administrators", icon: <Users />, path: "/people" } 
   ];
 
-  const items = role === "admin" ? adminItems : userItems;
+  const items = role === "ADMIN" ? adminItems : userItems;
 
   return (
     <div className={`ml-5 mt-20 mb-20 fixed left-0 top-0 rounded-xl h-[calc(100vh-100px)] shadow-xl ${isOpen ? "w-64" : "w-16"} transition-all duration-300 flex flex-col z-3 bg-white`}>

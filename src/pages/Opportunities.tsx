@@ -24,7 +24,7 @@ const Opportunities: React.FC = () => {
     <div className="h-[calc(100vh-130px)]">
       <div className="flex items-center justify-between mt-2 mb-5">
         <div className="flex items-center gap-4">
-          {role === "admin" && (
+          {role === "ADMIN" && (
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
                 <Button className="bg-blue-600 text-white hover:bg-blue-700">
