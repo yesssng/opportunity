@@ -23,7 +23,7 @@ const CategoryFilter: React.FC<Props> = ({
               : 'text-gray-600 hover:text-blue-600'
           }`}
         >
-          {category}
+          {(category !== null) ? category : "N/A"}
         </button>
       ))}
     </div>

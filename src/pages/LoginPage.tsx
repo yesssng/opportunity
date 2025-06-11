@@ -59,6 +59,7 @@ const LoginPage: React.FC = () => {
       firstName: user.firstName,
       lastName: user.lastName,
       role: user.role,
+      token: token,
     });
 
     setAlertMessage("Login successful! You can continue using the app.");

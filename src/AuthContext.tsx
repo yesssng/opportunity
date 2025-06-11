@@ -5,6 +5,7 @@ interface User {
   firstName: string;
   lastName: string;
   role: "USER" | "ADMIN";
+  token: string;
 }
 
 interface AuthContextType extends User {
@@ -26,13 +27,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           firstName: parsedUser.firstName ?? "", 
           lastName: parsedUser.lastName ?? "", 
           role: parsedUser.role ?? "user",
+          token: parsedUser.token ?? "",
         };
       } catch {
         console.error("Failed to parse user data from localStorage");
       }
     }
 
-    return { username: "", firstName: "", lastName: "" };
+    return { username: "", firstName: "", lastName: "", role: "USER", token: "" };
   });
 
   useEffect(() => {

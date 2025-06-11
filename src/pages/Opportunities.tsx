@@ -1,17 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardList from "@/components/CardList";
 import CategoryFilter from "@/components/CategoryFilter";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
-import jobInfo from "../../jobInfo.json";
+import axios from "axios";
+//import jobInfo from "../../jobInfo.json";
 import { useAuth } from "../AuthContext";
 import { CardWithForm } from "../components/CardWithForm"; // Импортируй свою форму
 
+type Job = {
+  id: number;
+  image: string;
+  title: string;
+  company: string;
+  location: string;
+  category: string;
+  yearOfStudy: string[];
+  description: string;
+  requirements: string[];
+  responsibilities: string[];
+  benefits: string[];
+  deadline: string;
+};
+
 const Opportunities: React.FC = () => {
-  const { role } = useAuth();
+  const { role, token } = useAuth();
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [jobInfo, setJobInfo] = useState<Job[]>([]); // заменили opportunities на jobInfo
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/api/opportunities", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setJobInfo(response.data); 
+      } catch (error) {
+        console.error("Failed to fetch opportunities", error);
+      }
+    };
+    fetchJobs();
+  }, [token]);
+  console.log(token)
 
   const categories = ["All", ...Array.from(new Set(jobInfo.map(job => job.category)))];
 
@@ -35,7 +69,11 @@ const Opportunities: React.FC = () => {
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-lg font-semibold">Add Opportunity</h2>
                 </div>
-                <CardWithForm />
+                <CardWithForm onSuccess={(newJob) => {
+  console.log("✅ New job received:", newJob);
+  // Например, добавление в список:
+  setJobInfo((prev) => [...prev, newJob]);
+}} />
               </DialogContent>
             </Dialog>
           )}
